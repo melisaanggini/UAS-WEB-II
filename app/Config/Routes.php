@@ -13,6 +13,7 @@ $routes->get('/kuisioner_biodata', 'KuisionerBiodata::index');
 $routes->get('/kuisioner_layanan_akademik', 'KuisionerLayananAkademik::index');
 $routes->get('/kuisioner_layanan_kemahasiswaan', 'KuisionerLayananKemahasiswaan::index');
 $routes->get('/kuisioner_visi_misi', 'KuisionerVisiMisi::index');
+$routes->get('/kuisioner_selesai', 'KuisionerSelesai::index');
 $routes->get('/admin', 'Admin::index');
 
 

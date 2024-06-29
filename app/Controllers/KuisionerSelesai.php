@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Kuisione extends BaseController
+class KuisionerSelesai extends BaseController
 {
     public function index(): string
     {
