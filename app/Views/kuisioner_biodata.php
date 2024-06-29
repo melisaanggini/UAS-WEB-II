@@ -239,19 +239,19 @@
             <form action="kuisoner_visi-misi.php">
                 <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" name="nama_lengkap" required>
+                    <input type="text" name="nama_lengkap" value="User" disabled>
                 </div>
                 <div class="form-group">
                     <label>NIM</label>
-                    <input type="text" name="nim" required>
+                    <input type="text" name="nim" value="2210817310001" disabled>
                 </div>
                 <div class="form-group">
                     <label>Program Studi</label>
-                    <input type="text" name="program_studi" required>
+                    <input type="text" name="program_studi" value="Teknologi Informasi" disabled>
                 </div>
                 <div class="form-group">
                     <label>No. Handphone</label>
-                    <input type="text" name="no_handphone" required>
+                    <input type="text" name="no_handphone" value="089692601314" disabled>
                 </div>
                 <div class="form-group">
                     <label>Semester</label>

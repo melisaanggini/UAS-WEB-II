@@ -113,7 +113,7 @@
             <li><i class="fas fa-users"></i><span>e-Commerce</span></li>
             <li><i class="fas fa-building"></i><span>e-Office</span></li>
             <label class="label">Other</label>
-            <li><a href="/kuisioner_awal"><i class="fas fa-question-circle"></i>Kuisioner</span></a></li>
+            <li><a href="/kuisioner_biodata"><i class="fas fa-question-circle"></i>Kuisioner</span></a></li>
             <li><i class="fas fa-question-circle"></i><span>FAQ</span></li>
             <li><i class="fas fa-user"></i><span>Profile</span></li>
             <li><i class="fas fa-sign-out-alt"></i><span>Logout</span></li>
@@ -124,7 +124,7 @@
             <h2>Dashboard</h2>
         </div>
         <div class="alert mt-3">
-            Kamu belum mengisi Kuisioner pada periode semester ini, silahkan isi Kuisioner <a href="/kuisioner_awal">Disini</a>
+            Kamu belum mengisi Kuisioner pada periode semester ini, silahkan isi Kuisioner <a href="/kuisioner_biodata">Disini</a>
         </div>
         <div class="jumbotron text-center bg-white p-4">
             <h1 class="display-4">Selamat Datang di Layanan Fakultas Teknik!</h1>
