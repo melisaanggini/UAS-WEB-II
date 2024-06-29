@@ -266,6 +266,7 @@
                     <input type="text" name="domisili" required>
                 </div>
                 <div class="form-actions">
+                <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
                     <a href="/kuisioner_visi_misi">Lanjut</a>
                 </div>
             </form>
