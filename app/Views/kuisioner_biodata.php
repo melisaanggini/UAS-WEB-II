@@ -266,7 +266,7 @@
                     <input type="text" name="domisili" required>
                 </div>
                 <div class="form-actions">
-                    <a href="/kuisioner_layanan_visi_misi">Lanjut</a>
+                    <a href="/kuisioner_visi_misi">Lanjut</a>
                 </div>
             </form>
         </div>
