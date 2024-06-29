@@ -168,7 +168,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card">
-                    <img class="card-img-top" src="https://i.pinimg.com/564x/14/4d/42/144d42372a6452e789e460daf1b6bc26.jpg" alt="Surat Keterangan Lulus">
+                    <img class="card-img-top" src="https://i.pinimg.com/564x/17/4f/5d/174f5dce9a192f703b5a4d8c4d7d4547.jpg" alt="Surat Keterangan Lulus">
                     <div class="card-body">
                         <h5 class="card-title">Surat Keterangan Lulus</h5>
                         <p class="card-text">Dapatkan Surat Keterangan Lulus dengan Mudah.</p>
@@ -186,7 +186,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card">
-                    <img class="card-img-top" src="https://i.pinimg.com/564x/82/38/d5/8238d5ca63a38eb14fdcd811888a142f.jpg" alt="Surat Pengantar Izin Penelitian">
+                    <img class="card-img-top" src="https://i.pinimg.com/564x/17/4f/5d/174f5dce9a192f703b5a4d8c4d7d4547.jpg" alt="Surat Pengantar Izin Penelitian">
                     <div class="card-body">
                         <h5 class="card-title">Surat Pengantar Izin Penelitian</h5>
                         <p class="card-text">Dapatkan Surat Pengantar untuk Penelitian.</p>

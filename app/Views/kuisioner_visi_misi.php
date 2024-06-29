@@ -236,7 +236,7 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisoner_layanan-akademik.php">
+            <form action="kuisioner_layanan_akademik.php">
                 <div class="form-group">
                     <label>Apakah Anda sudah pernah membaca "Visi, Misi, Tujuan dan Strategi" Fakultas Teknik ULM?</label>
                     <input type="radio" name="visi_misi" value="Ya" required> Ya
@@ -280,7 +280,7 @@
                     <input type="checkbox" name="cerminan_visi_misi" value="Tidak Ada"> Tidak Ada
                 </div>
                 <div class="form-actions">
-                    <button type="submit">Lanjut</button>
+                    <a href="/kuisioner_layanan_akademik">Lanjut</a>
                 </div>
             </form>
         </div>

@@ -264,7 +264,7 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisoner_layanan-kemahasiswaan.php">
+            <form action="kuisioner_layanan_kemahasiswaan.php">
                 <div class="quiz-section">
                     <label class="quiz-label"><h3>Keandalan (Reliability)</h3>Aspek Keandalan (reliability) bertujuan untuk mengukur sejauh mana layanan akademik yang
                         diberikan oleh Fakultas Teknik dapat diandalkan dan konsisten.
@@ -522,7 +522,7 @@
                 </div>
                 <div class="form-actions">
                     <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
-                    <button type="submit">Lanjut</button>
+                    <a href="/kuisioner_layanan_kemahasiswaan">Lanjut</a>
                 </div>
             </form>
         </div>

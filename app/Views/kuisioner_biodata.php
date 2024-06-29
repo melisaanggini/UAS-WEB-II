@@ -236,7 +236,7 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisoner_visi-misi.php">
+            <form action="kuisoner_visi_misi.php">
                 <div class="form-group">
                     <label>Nama Lengkap</label>
                     <input type="text" name="nama_lengkap" value="User" disabled>
@@ -266,7 +266,7 @@
                     <input type="text" name="domisili" required>
                 </div>
                 <div class="form-actions">
-                    <button type="submit">Lanjut</button>
+                    <a href="/kuisioner_layanan_visi_misi">Lanjut</a>
                 </div>
             </form>
         </div>
