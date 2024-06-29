@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\BiodataModel;
 
 use CodeIgniter\Model;
 
@@ -9,6 +10,11 @@ class BiodataModel extends Model
     protected $table = 'biodata';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'nama_lengkap', 'nim', 'prodi', 'semester', 'no_hp', 'tahun_akademik', 'domisili'
+        'namaLengkap', 'NIM', 'programStudi', 'semester', 'noHandphone', 'tahunAkademik', 'domisili'
     ];
+
+    function ambil_data(){
+
+        return $this->findAll();
+    }
 }

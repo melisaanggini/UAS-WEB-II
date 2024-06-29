@@ -15,7 +15,9 @@ $routes->get('/kuisioner_layanan_kemahasiswaan', 'KuisionerLayananKemahasiswaan:
 $routes->get('/kuisioner_visi_misi', 'KuisionerVisiMisi::index');
 $routes->get('/kuisioner_selesai', 'KuisionerSelesai::index');
 $routes->get('/admin', 'Admin::index');
+$routes->add('kuisioner_biodata', 'KuisionerBiodata::create');
 $routes->get('Kuisioner', 'KuisionerController::index');
+$routes->get('biodata/(:segment)/delete', 'Admin::delete/$1');
 
 
 

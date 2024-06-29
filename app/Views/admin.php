@@ -157,7 +157,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>No.</th>
                         <th>Nama Lengkap</th>
                         <th>NIM</th>
                         <th>Program Studi</th>
@@ -165,8 +165,34 @@
                         <th>No. Handphone</th>
                         <th>Tahun Akademik</th>
                         <th>Domisili</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
+                <tbody>
+                <?php foreach($data as $u){ ?>
+                    <tr>
+
+                        <td><?php echo $i++;?></td>
+
+                        <td><?php echo $u['namaLengkap']; ?></td>
+
+                        <td><?php echo $u['NIM']; ?></td>
+
+                        <td><?php echo $u['programStudi']; ?></td>
+
+                        <td><?php echo $u['noHandphone']; ?></td>
+
+                        <td><?php echo $u['semester']; ?></td>
+
+                        <td><?php echo $u['tahunAkademik']; ?></td>
+
+                        <td><?php echo $u['domisili']; ?></td>
+
+                        <td><a href="<?= base_url('biodata/'.$u['id'].'/delete') ?>">Delete</a></td>
+
+                    </tr>
+                    <?php } ?>
+                </tbody>
             </table>
         </div>
     </div>

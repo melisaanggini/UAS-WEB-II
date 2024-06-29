@@ -236,22 +236,22 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisoner_visi_misi.php">
+            <form method='post'>
                 <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" name="nama_lengkap" value="User" disabled>
+                    <input type="text" name="namaLengkap" value="User" disabled>
                 </div>
                 <div class="form-group">
                     <label>NIM</label>
-                    <input type="text" name="nim" value="2210817310001" disabled>
+                    <input type="text" name="NIM" value="2210817310001" disabled>
                 </div>
                 <div class="form-group">
                     <label>Program Studi</label>
-                    <input type="text" name="program_studi" value="Teknologi Informasi" disabled>
+                    <input type="text" name="programStudi" value="Teknologi Informasi" disabled>
                 </div>
                 <div class="form-group">
                     <label>No. Handphone</label>
-                    <input type="text" name="no_handphone" value="089692601314" disabled>
+                    <input type="text" name="noHandphone" value="089692601314" disabled>
                 </div>
                 <div class="form-group">
                     <label>Semester</label>
@@ -259,7 +259,7 @@
                 </div>
                 <div class="form-group">
                     <label>Tahun Akademik</label>
-                    <input type="text" name="tahun_akademik" required>
+                    <input type="text" name="tahunAkademik" required>
                 </div>
                 <div class="form-group">
                     <label>Domisili</label>
@@ -267,7 +267,7 @@
                 </div>
                 <div class="form-actions">
                 <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
-                    <a href="/kuisioner_visi_misi">Lanjut</a>
+                    <button type="submit">Lanjut</button>
                 </div>
             </form>
         </div>
