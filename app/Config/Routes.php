@@ -15,6 +15,8 @@ $routes->get('/kuisioner_layanan_kemahasiswaan', 'KuisionerLayananKemahasiswaan:
 $routes->get('/kuisioner_visi_misi', 'KuisionerVisiMisi::index');
 $routes->get('/kuisioner_selesai', 'KuisionerSelesai::index');
 $routes->get('/admin', 'Admin::index');
+$routes->get('Kuisioner', 'KuisionerController::index');
+
 
 
 
