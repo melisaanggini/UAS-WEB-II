@@ -113,7 +113,7 @@
             <li><i class="fas fa-users"></i><span>e-Commerce</span></li>
             <li><i class="fas fa-building"></i><span>e-Office</span></li>
             <label class="label">Other</label>
-            <li><a href="/kuisioner_biodata"><i class="fas fa-question-circle"></i>Kuisioner</span></a></li>
+            <li><a href="/kuisioner_biodata"><i class="fas fa-question-circle"></i>Kuisioner</a></li>
             <li><i class="fas fa-question-circle"></i><span>FAQ</span></li>
             <li><i class="fas fa-user"></i><span>Profile</span></li>
             <li><i class="fas fa-sign-out-alt"></i><span>Logout</span></li>

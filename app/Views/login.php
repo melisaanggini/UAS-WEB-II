@@ -98,7 +98,7 @@
             <h2>Fakultas Teknik</h2>
             <p>Universitas Lambung Mangkurat</p>
         </div>
-        <form action="login_process.php" method="POST">
+        <form action="<?php echo base_url('login/authenticate'); ?>" method="POST">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -111,6 +111,7 @@
             <a href="#" class="link">Lupa password?</a>
             <a href="#" class="link">Belum Mempunyai Akun? Daftar</a>
         </form>
+        <?php if (isset($error)) { echo '<div class="alert alert-danger mt-3">'.$error.'</div>'; } ?>
     </div>
 </body>
 </html>
