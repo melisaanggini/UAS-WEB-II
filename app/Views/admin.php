@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right, #ffcccc 0%, #CCFFCC 100%);
+            animation: moveGradient 10s linear infinite;
+            background-size: 200% 200%;
+        }
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .sidebar {
             width: 250px;
@@ -75,7 +82,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ffffff;
+            background: linear-gradient(to right, #ccffcc, #ffcccc); 
+            color: black;
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -91,6 +99,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
         .container h2 {
             text-align: center;
@@ -110,8 +119,12 @@
             padding: 8px;
         }
         th {
-            background-color: #007bff;
-            color: #fff;
+            background: linear-gradient(to right, #ccffcc, #ffcccc); 
+            color: black;
+        }
+        .h3-kw{
+            text-align: center;
+            margin-top: 40px;
         }
         th, td {
             text-align: left;
@@ -208,9 +221,172 @@
                         <td><?= htmlspecialchars($v['sumber_info_visi_misi']); ?></td>
                         <td><?= htmlspecialchars($v['sosialisasi_visi_misi']); ?></td>
                         <td><?= htmlspecialchars($v['pemahaman_visi_misi']); ?></td>
-                        <td><?= htmlspecialchars($v['akomodasi_kegiatan_akademik']); ?></td
+                        <td><?= htmlspecialchars($v['akomodasi_kegiatan_akademik']); ?></td>
                         <td><?= htmlspecialchars($v['tercermin_visi_misi']); ?></td>
                         <td><a href="<?= base_url('admin/deleteVisiMisi/'.$v['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <h2>Hasil Kuisioner Layanan Akademik</h2>
+            <p>Berikut adalah hasil kuisioner biodata yang telah diisi oleh mahasiswa.</p>
+            <h3 class="h3-kw">Keandalan (Reliability)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Kejelasan Materi</th>
+                        <th>Ketepatan Waktu</th>
+                        <th>Kelengkapan Referensi</th>
+                        <th>Kesesuaian Keahlian Dosen</th>
+                        <th>Kemampuan Staf Akademik</th>
+                        <th>Kualitas Layanan Staf Akademik</th>
+                        <th>Kejelasan Pedoman</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($layanan_akademik as $i => $u){ ?>
+                    <tr>
+                        <td><?= $i + 1; ?></td>
+                        <td><?= htmlspecialchars($u['materi_dosen']); ?></td>
+                        <td><?= htmlspecialchars($u['waktu_perkuliahan']); ?></td>
+                        <td><?= htmlspecialchars($u['referensi_pembelajaran']); ?></td>
+                        <td><?= htmlspecialchars($u['keahlian_dosen']); ?></td>
+                        <td><?= htmlspecialchars($u['kemampuan_staf']); ?></td>
+                        <td><?= htmlspecialchars($u['layanan_staf']); ?></td>
+                        <td><?= htmlspecialchars($u['pedoman_kurikulum']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <h3 class="h3-kw">Daya Tanggap (Responsiveness)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Kesediaan Dosen dan Karyawan</th>
+                        <th>Kecepatan Dosen dan Karyawan</th>
+                        <th>Kecepatan dalam Memberikan Pelayanan</th>
+                        <th>Sikap Profesionalisme dalam Memberikan Pelayanan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($layanan_akademik as $i => $u){ ?>
+                    <tr>
+                        <td><?= $i + 1; ?></td>
+                        <td><?= htmlspecialchars($u['pelayanan_dosen']); ?></td>
+                        <td><?= htmlspecialchars($u['keluhan_mahasiswa']); ?></td>
+                        <td><?= htmlspecialchars($u['kecepatan_pelayanan']); ?></td>
+                        <td><?= htmlspecialchars($u['profesionalisme']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <h3 class="h3-kw">Kepastian (Assurance)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Permasalahan Akademik dikonsultasikan dan ditangani</th>
+                        <th>Keramahan dan Kesopanan Staf Akademik</th>
+                        <th>Transparansi dan Keterukuran Sistem Penilaian</th>
+                        <th>Suasana Akademik</th>
+                        <th>Penerapan Sanksi bagi Mahasiswa yang Melanggar Peraturan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($layanan_akademik as $i => $u){ ?>
+                    <tr>
+                        <td><?= $i + 1; ?></td>
+                        <td><?= htmlspecialchars($u['konsultasi_dosen']); ?></td>
+                        <td><?= htmlspecialchars($u['kesopanan_staf']); ?></td>
+                        <td><?= htmlspecialchars($u['transparansi_penilaian']); ?></td>
+                        <td><?= htmlspecialchars($u['suasana_akademik']); ?></td>
+                        <td><?= htmlspecialchars($u['penerapan_sanksi']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <h3 class="h3-kw">Empati (Empathy)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Kepedulian Dosen dan Staf dalam Memahami Kepentingan dan Kesulitan Mahasiswa</th>
+                        <th>Proses Monitoring terhadap Kemajuan Mahasiswa</th>
+                        <th>Kesiadaan Dosen dalam Membantu Mahasiswa</th>
+                        <th>Fakultas Berusaha Memahami Minat dan Makat Mahasiswa</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($layanan_akademik as $i => $u){ ?>
+                    <tr>
+                        <td><?= $i + 1; ?></td>
+                        <td><?= htmlspecialchars($u['kepedulian_dosen']); ?></td>
+                        <td><?= htmlspecialchars($u['monitoring_kemajuan']); ?></td>
+                        <td><?= htmlspecialchars($u['bantuan_dosen']); ?></td>
+                        <td><?= htmlspecialchars($u['minat_bakat']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <h3 class="h3-kw">Tangible (Keberwujudan Saran Prasarana)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Kerapian dan Kebersihan Ruang Kuliah</th>
+                        <th>Ketersediaan Ruang Kuliah/Studio/Laboratorium</th>
+                        <th>Ketersediaan sarana pembelajaran di ruang kuliah (lcd, papan tulis, kursi, meja, dll)</th>
+                        <th>Ketersediaan Buku referensi yang ada diperpustakaan/ruang baca</th>
+                        <th>Ketersediaan fasilitas ibadah, kamar kecil yang rapi dan bersih</th>
+                        <th>Ketersediaan tempat parkir yang luas</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($layanan_akademik as $i => $u){ ?>
+                    <tr>
+                        <td><?= $i + 1; ?></td>
+                        <td><?= htmlspecialchars($u['kebersihan_ruang']); ?></td>
+                        <td><?= htmlspecialchars($u['ketersediaan_ruang']); ?></td>
+                        <td><?= htmlspecialchars($u['sarana_pembelajaran']); ?></td>
+                        <td><?= htmlspecialchars($u['buku_referensi']); ?></td>
+                        <td><?= htmlspecialchars($u['fasilitas_ibadah']); ?></td>
+                        <td><?= htmlspecialchars($u['parkir_luas']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+            <h2>Hasil Kuisioner Layanan Kemahasiswaan</h2>
+            <p>Berikut adalah hasil kuisioner visi dan misi yang telah diisi oleh mahasiswa.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tingkat kepuasan anda terhadap layanan di bidang penalaran, minat, bakat</th>
+                        <th>Tingkat kepuasan anda terhadap layanan bimbingan karir dan kewirausahaan</th>
+                        <th>Tingkat kepuasan anda terhadap layanan bimbingan konseling, beasiswa, dan kesehatan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($layanan_kemahasiswaan as $j => $d){ ?>
+                    <tr>
+                        <td><?= $j + 1; ?></td>
+                        <td><?= htmlspecialchars($d['layanan_penalaran']); ?></td>
+                        <td><?= htmlspecialchars($d['layanan_karir']); ?></td>
+                        <td><?= htmlspecialchars($d['layanan_bimbingan']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteVisiMisi/'.$d['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>

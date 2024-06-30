@@ -11,7 +11,14 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: linear-gradient(to right, #ffcccc 0%, #CCFFCC 100%);
+            animation: moveGradient 10s linear infinite;
+            background-size: 200% 200%;
+        }
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .sidebar {
             width: 250px;
@@ -75,7 +82,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ffffff;
+            background: linear-gradient(to right, #ccffcc, #ffcccc); 
+            color: black;
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -94,6 +102,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
         .container h2 {
             text-align: center;

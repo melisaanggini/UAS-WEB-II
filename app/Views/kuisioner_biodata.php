@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-size: 200% 200%;
+            background-image: linear-gradient(to right, #ffcccc 0%, #ccffcc 100%);
+            animation: moveGradient 10s linear infinite;
+        }
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .sidebar {
             width: 250px;
@@ -75,15 +82,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ffffff;
             padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: white;
+            background: linear-gradient(to right, #ccffcc, #ffcccc); 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            color: black;
         }
         .header input {
             width: 300px;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .header img {
             width: 40px;

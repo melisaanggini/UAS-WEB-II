@@ -9,10 +9,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: linear-gradient(to right, #ffcccc 0%, #ccffcc 100%);
             margin: 0;
             padding: 0;
+            background-size: 200% 200%;
+            animation: gradientShift 10s linear infinite;
         }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .sidebar {
             width: 250px;
             background: #ffffff;
@@ -22,25 +31,24 @@
             overflow-y: auto;
             padding-top: 20px;
         }
+
         .sidebar img {
             display: block;
             margin: 0 auto 10px auto;
             width: 50px;
         }
-        .sidebar h2 {
+
+        .sidebar h2, .sidebar h5 {
             text-align: center;
             color: #333;
             margin-bottom: 30px;
         }
-        .sidebar h5 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
+
         .sidebar ul {
             list-style: none;
             padding: 0;
         }
+
         .sidebar ul li {
             padding: 10px 20px;
             text-align: left;
@@ -50,53 +58,96 @@
             align-items: center;
             font-size: 16px;
         }
+
         .sidebar ul li:hover, .sidebar ul li.active {
             background: #e7f1ff;
             color: #007bff;
         }
-        .sidebar ul li.active {
-            background: #d7e7ff;
-        }
-        .sidebar ul li i {
-            margin-right: 10px;
-        }
+
         .sidebar .label {
             margin-left: 20px;
             margin-bottom: 10px;
             color: #333;
             font-size: 16px;
         }
+
         .content {
             margin-left: 270px;
             padding: 2rem;
         }
+
         .header {
-            background: #1A237E; /* Dark blue background */
+            background-image: linear-gradient(to right, #ffcccc, #ccffcc);
             color: white;
-            padding: 1rem;
+            padding: 20px;
+            font-size: 24px;
             text-align: center;
             border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .card {
             margin: 1rem 0;
             border: none;
             border-radius: 10px;
-            background-color: #FFECB3; /* Soft yellow background */
+            background-color: #FFECB3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .card img {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
+
         .card-body {
             text-align: center;
         }
+
         .alert {
-            background-color: #FFECB3; /* Soft yellow background */
-            color: #1A237E; /* Dark blue text */
+            background-color: #FFECB3;
+            color: black;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .alert a {
             font-weight: bold;
-            color: #1A237E; /* Dark blue text */
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .jumbotron h1 {
+            color: #333;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .mt-5 {
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header, .alert, .jumbotron h1, .jumbotron p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>

@@ -10,61 +10,80 @@
             padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: flex-end; 
+            justify-content: center; 
             align-items: center;
             height: 100vh;
             background: url('https://images.pexels.com/photos/26777218/pexels-photo-26777218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center center no-repeat;
             background-size: cover;
             padding-right: 20vw; 
         }
+        
         .container {
             width: 100%;
             max-width: 500px;
-            background: rgba(255, 255, 255, 0.8); /* Set background to white with 80% opacity */
+            background-image: linear-gradient(to right, #ffcccc 0%, #ccffcc 100%);
+            background-size: 200% 200%;
             padding: 40px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 10px;
             text-align: center;
-            margin: 20px; /* Add margin */
+            align-items: center;
+            justify-content: center;
+            margin-left: 240px;
+            animation: gradientShift 10s linear infinite;
+            
+    }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        .header img {
+    .header img {
             width: 100px;
             margin-bottom: 20px;
-        }
-        .header h2 {
+    }
+
+    .header h2 {
             margin: 0;
             font-size: 24px;
             color: #333;
-        }
-        .header p {
+    }
+
+    .header p {
             margin: 0;
             margin-bottom: 20px;
             color: #777;
-        }
-        form {
+    }
+
+    form {
             width: 100%;
-        }
-        .input-group {
+    }
+
+    .input-group {
             margin-bottom: 15px;
             text-align: left;
-        }
-        .input-group label {
+    }
+
+    .input-group label {
             display: block;
             margin-bottom: 5px;
             color: #333;
-        }
-        .input-group input {
+    }
+
+    .input-group input {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
             box-sizing: border-box;
-        }
-        .input-group input:focus {
+    }
+
+    .input-group input:focus {
             outline: none;
             border-color: #007bff;
-        }
-        .btn {
+    }
+
+    .btn {
             width: 100%;
             padding: 10px;
             border: none;
@@ -75,20 +94,24 @@
             font-size: 16px;
             box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #fff;
             transition: all 0.3s ease;
-        }
-        .btn:hover {
+    }
+
+    .btn:hover {
             background: linear-gradient(145deg, #e6e6e6, #ffffff);
             box-shadow: inset 5px 5px 10px #ccc, inset -5px -5px 10px #fff;
-        }
-        .link {
+    }
+
+    .link {
             display: block;
             margin-top: 10px;
             color: #007bff;
             text-decoration: none;
-        }
-        .link:hover {
+    }
+
+    .link:hover {
             text-decoration: underline;
-        }
+    }
+
     </style>
 </head>
 <body>

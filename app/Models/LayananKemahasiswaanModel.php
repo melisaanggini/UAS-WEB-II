@@ -11,4 +11,8 @@ class LayananKemahasiswaanModel extends Model
     protected $allowedFields = [
         'layanan_penalaran', 'layanan_karir', 'layanan_bimbingan'
     ];
+    public function ambil_data()
+    {
+        return $this->findAll();
+    }
 }

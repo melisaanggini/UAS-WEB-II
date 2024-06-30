@@ -11,7 +11,14 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-size: 200% 200%;
+            background-image: linear-gradient(to right, #ffcccc 0%, #CCFFCC 100%);
+            animation: moveGradient 10s linear infinite;
+        }
+        @keyframes moveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .sidebar {
             width: 250px;
@@ -75,9 +82,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ffffff;
             padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: white;
+            background: linear-gradient(to right, #ccffcc, #ffcccc); 
+            color: black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px; 
         }
         .header input {
             width: 300px;
@@ -147,15 +157,15 @@
             color: #333;
             margin-bottom: 5px;
         }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
         .form-group input[type="radio"], .form-group input[type="checkbox"] {
-            width: auto;
+            margin-right: 10px;
+        }
+        .form-group .radio-label, .form-group .checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .radio-label input, .form-group .checkbox-label input {
+            margin: 0 10px 0 0;
         }
         .form-actions {
             display: flex;
@@ -212,7 +222,7 @@
             </div>
         </div>
         <div class="container">
-            <h2>Kuisioner Mahasiswa</h2>
+            <h2 class="k2">Kuisioner Mahasiswa</h2>
             <p>Isi kuisioner bagi mahasiswa aktif FT ULM untuk peningkatan kualitas dan evaluasi layanan FT ULM</p>
             <div class="stepper">
                 <div class="step" id="step1">
@@ -239,48 +249,96 @@
             <form method='post'>
                 <div class="form-group">
                     <label>Apakah Anda sudah pernah membaca "Visi, Misi, Tujuan dan Strategi" Fakultas Teknik ULM?</label>
-                    <input type="radio" name="sudah_baca_visi_misi" value="Ya" required> Ya
-                    <input type="radio" name="sudah_baca_visi_misi" value="Tidak" required> Tidak
+                    <div class="radio-label">
+                        <input type="radio" name="sudah_baca_visi_misi" value="Ya" required> Ya
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="sudah_baca_visi_misi" value="Tidak" required> Tidak
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Jika Ya, darimana anda mengetahui visi dan misi Fakultas? Boleh dipilih lebih dari satu</label>
-                    <input type="checkbox" name="sumber_info_visi_misi" value="Website / Media Sosial"> Website / Media Sosial
-                    <input type="checkbox" name="sumber_info_visi_misi" value="Brosur"> Brosur
-                    <input type="checkbox" name="sumber_info_visi_misi" value="Pidato / Sosialisasi Pimpinan"> Pidato / Sosialisasi Pimpinan
-                    <input type="checkbox" name="sumber_info_visi_misi" value="Banner / Pamflet"> Banner / Pamflet
-                    <input type="checkbox" name="sumber_info_visi_misi" value="Paparan Informasi"> Paparan Informasi
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="sumber_info_visi_misi" value="Website / Media Sosial"> Website / Media Sosial
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="sumber_info_visi_misi" value="Brosur"> Brosur
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="sumber_info_visi_misi" value="Pidato / Sosialisasi Pimpinan"> Pidato / Sosialisasi Pimpinan
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="sumber_info_visi_misi" value="Banner / Pamflet"> Banner / Pamflet
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="sumber_info_visi_misi" value="Paparan Informasi"> Paparan Informasi
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Apakah anda sudah pernah mendapatkan sosialisasi/penjelasan tentang "Visi, Misi, Tujuan dan Strategi" Fakultas Teknik ULM?</label>
-                    <input type="radio" name="sosialisasi_visi_misi" value="Sering" required> Sering
-                    <input type="radio" name="sosialisasi_visi_misi" value="Beberapa Kali"> Beberapa Kali
-                    <input type="radio" name="sosialisasi_visi_misi" value="Satu Kali"> Satu Kali
-                    <input type="radio" name="sosialisasi_visi_misi" value="Tidak Sama Sekali"> Tidak Sama Sekali
+                    <div class="radio-label">
+                        <input type="radio" name="sosialisasi_visi_misi" value="Sering" required> Sering
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="sosialisasi_visi_misi" value="Beberapa Kali"> Beberapa Kali
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="sosialisasi_visi_misi" value="Satu Kali"> Satu Kali
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="sosialisasi_visi_misi" value="Tidak Sama Sekali"> Tidak Sama Sekali
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Bagaimanakah tingkat pemahaman anda terhadap "Visi, Misi, Tujuan dan Strategi" Fakultas Teknik ULM?</label>
-                    <input type="radio" name="pemahaman_visi_misi" value="Sangat Paham" required> Sangat Paham
-                    <input type="radio" name="pemahaman_visi_misi" value="Paham"> Paham
-                    <input type="radio" name="pemahaman_visi_misi" value="Kurang Paham"> Kurang Paham
-                    <input type="radio" name="pemahaman_visi_misi" value="Tidak Paham"> Tidak Paham
+                    <div class="radio-label">
+                        <input type="radio" name="pemahaman_visi_misi" value="Sangat Paham" required> Sangat Paham
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="pemahaman_visi_misi" value="Paham"> Paham
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="pemahaman_visi_misi" value="Kurang Paham"> Kurang Paham
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="pemahaman_visi_misi" value="Tidak Paham"> Tidak Paham
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Menurut Anda apakah semua aspek kegiatan akademik sudah terakomodasi dalam visi dan misi Fakultas Teknik ULM?</label>
-                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Sudah" required> Sudah
-                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Sebagian"> Sebagian
-                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Hanya Sedikit"> Hanya Sedikit
-                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Tidak Ada"> Tidak Ada
+                    <div class="radio-label">
+                        <input type="radio" name="akomodasi_kegiatan_akademik" value="Sudah" required> Sudah
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="akomodasi_kegiatan_akademik" value="Sebagian"> Sebagian
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="akomodasi_kegiatan_akademik" value="Hanya Sedikit"> Hanya Sedikit
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" name="akomodasi_kegiatan_akademik" value="Tidak Ada"> Tidak Ada
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Berdasarkan pertanyaan diatas, sudah tercermin dalam segi apakah visi dan misi Fakultas Teknik ULM? Boleh memilih jawaban lebih dari satu</label>
-                    <input type="checkbox" name="tercermin_visi_misi" value="Kurikulum & Kompetensi Lulusan"> Kurikulum & Kompetensi Lulusan
-                    <input type="checkbox" name="tercermin_visi_misi" value="Proses Pembelajaran"> Proses Pembelajaran
-                    <input type="checkbox" name="tercermin_visi_misi" value="Penelitian / Pengabdian"> Penelitian / Pengabdian
-                    <input type="checkbox" name="tercermin_visi_misi" value="Kompetensi dosen/ karyawan"> Kompetensi dosen/ karyawan
-                    <input type="checkbox" name="tercermin_visi_misi" value="Tidak Ada"> Tidak Ada
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="tercermin_visi_misi" value="Kurikulum & Kompetensi Lulusan"> Kurikulum & Kompetensi Lulusan
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="tercermin_visi_misi" value="Proses Pembelajaran"> Proses Pembelajaran
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="tercermin_visi_misi" value="Penelitian / Pengabdian"> Penelitian / Pengabdian
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="tercermin_visi_misi" value="Kompetensi dosen/ karyawan"> Kompetensi dosen/ karyawan
+                    </div>
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="tercermin_visi_misi" value="Tidak Ada"> Tidak Ada
+                    </div>
                 </div>
                 <div class="form-actions">
-                <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
+                    <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
                     <button type="submit">Lanjut</button>
                 </div>
             </form>
