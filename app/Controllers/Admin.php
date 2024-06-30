@@ -9,16 +9,17 @@ class Admin extends BaseController
 {
     public function index(): string
     {
-        $biodata = new BiodataModel();
-        $visi_misi = new VisiMisiModel();
-        $layanan_akademik = new LayananAkademikModel();
+        $biodataModel = new BiodataModel();
+        $visiMisiModel = new VisiMisiModel();
+        $layananAkademikModel = new LayananAkademikModel();
         
-        $data['biodata'] = $biodata->ambil_data();
-        $data['visi_misi'] = $visi_misi->ambil_data();
-        $data['layanan_akademik'] = $layanan_akademik->ambil_data();
+        $biodata = $biodataModel->ambil_data();
+        $visi_misi = $visiMisiModel->ambil_data();
+        $layanan_akademik = $layananAkademikModel->ambil_data();
 
-        return view('admin', compact('data'));
+        return view('admin', compact('biodata', 'visi_misi', 'layanan_akademik'));
     }
+
 
     public function deleteBiodata($id)
     {

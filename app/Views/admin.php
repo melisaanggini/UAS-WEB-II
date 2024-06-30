@@ -79,11 +79,8 @@
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .header input {
+        .header .input-group {
             width: 300px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
         }
         .header img {
             width: 40px;
@@ -146,9 +143,12 @@
                 <h1>Hasil Kuisioner Mahasiswa</h1>
                 <p>Isi kuisioner bagi mahasiswa aktif FT ULM untuk peningkatan kualitas dan evaluasi layanan FT ULM</p>
             </div>
-            <div>
-                <input type="text" placeholder="Cari Layanan...">
-                <img src="https://via.placeholder.com/40" alt="User Profile">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Cari Layanan..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cari</button>
+                </div>
+                <img src="https://via.placeholder.com/40" alt="User Profile" class="rounded-circle">
             </div>
         </div>
         <div class="container">
@@ -172,14 +172,14 @@
                 <?php foreach($biodata as $i => $u){ ?>
                     <tr>
                         <td><?= $i + 1; ?></td>
-                        <td><?= $u['namaLengkap']; ?></td>
-                        <td><?= $u['NIM']; ?></td>
-                        <td><?= $u['programStudi']; ?></td>
-                        <td><?= $u['semester']; ?></td>
-                        <td><?= $u['noHandphone']; ?></td>
-                        <td><?= $u['tahunAkademik']; ?></td>
-                        <td><?= $u['domisili']; ?></td>
-                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>">Delete</a></td>
+                        <td><?= htmlspecialchars($u['namaLengkap']); ?></td>
+                        <td><?= htmlspecialchars($u['NIM']); ?></td>
+                        <td><?= htmlspecialchars($u['programStudi']); ?></td>
+                        <td><?= htmlspecialchars($u['semester']); ?></td>
+                        <td><?= htmlspecialchars($u['noHandphone']); ?></td>
+                        <td><?= htmlspecialchars($u['tahunAkademik']); ?></td>
+                        <td><?= htmlspecialchars($u['domisili']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -204,13 +204,13 @@
                 <?php foreach($visi_misi as $j => $v){ ?>
                     <tr>
                         <td><?= $j + 1; ?></td>
-                        <td><?= $v['sudah_baca_visi_misi']; ?></td>
-                        <td><?= $v['sumber_info_visi_misi']; ?></td>
-                        <td><?= $v['sosialisasi_visi_misi']; ?></td>
-                        <td><?= $v['pemahaman_visi_misi']; ?></td>
-                        <td><?= $v['akomodasi_kegiatan_akademik']; ?></td>
-                        <td><?= $v['tercermin_visi_misi']; ?></td>
-                        <td><a href="<?= base_url('admin/deleteVisiMisi/'.$v['id']) ?>">Delete</a></td>
+                        <td><?= htmlspecialchars($v['sudah_baca_visi_misi']); ?></td>
+                        <td><?= htmlspecialchars($v['sumber_info_visi_misi']); ?></td>
+                        <td><?= htmlspecialchars($v['sosialisasi_visi_misi']); ?></td>
+                        <td><?= htmlspecialchars($v['pemahaman_visi_misi']); ?></td>
+                        <td><?= htmlspecialchars($v['akomodasi_kegiatan_akademik']); ?></td
+                        <td><?= htmlspecialchars($v['tercermin_visi_misi']); ?></td>
+                        <td><a href="<?= base_url('admin/deleteVisiMisi/'.$v['id']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');">Delete</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>

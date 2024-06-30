@@ -15,4 +15,8 @@ class LayananAkademikModel extends Model
         'bantuan_dosen', 'minat_bakat', 'kebersihan_ruang','ketersediaan_ruang', 'sarana_pembelajaran', 'buku_referensi', 'fasilitas_ibadah', 
         'parkir_luas'
     ];
+    public function ambil_data()
+    {
+        return $this->findAll();
+    }
 }
