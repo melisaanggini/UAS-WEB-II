@@ -239,7 +239,7 @@
             <div class="form-group">
                 <h3>Anda telah mengisi kuisioner</h3>
                 <p>Terima kasih atas partisipasi anda dalam pengisian kuisioner ini. Semoga masukkan dari anda dapat membuat Layanan FT ULM menjadi lebih baik.</p>
-                <img src="/mnt/data/image.png" alt="Thank you" style="max-width: 100%; height: auto;">
+                <img src="https://i.pinimg.com/564x/85/ae/9b/85ae9bec05cb35ebca9b3491d3254ada.jpg" alt="Thank you" style="max-width: 100%; height: auto;">
             </div>
         </div>
     </div>
