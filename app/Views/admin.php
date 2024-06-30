@@ -152,8 +152,8 @@
             </div>
         </div>
         <div class="container">
-            <h2>Hasil Kuisioner</h2>
-            <p>Berikut adalah hasil kuisioner yang telah diisi oleh mahasiswa.</p>
+            <h2>Hasil Kuisioner Biodata</h2>
+            <p>Berikut adalah hasil kuisioner biodata yang telah diisi oleh mahasiswa.</p>
             <table>
                 <thead>
                     <tr>
@@ -169,7 +169,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($data as $i => $u){ ?>
+                <?php foreach($biodata as $i => $u){ ?>
                     <tr>
                         <td><?= $i + 1; ?></td>
                         <td><?= $u['namaLengkap']; ?></td>
@@ -179,7 +179,38 @@
                         <td><?= $u['noHandphone']; ?></td>
                         <td><?= $u['tahunAkademik']; ?></td>
                         <td><?= $u['domisili']; ?></td>
-                        <td><a href="<?= base_url('admin/delete/'.$u['id']) ?>">Delete</a></td>
+                        <td><a href="<?= base_url('admin/deleteBiodata/'.$u['id']) ?>">Delete</a></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+
+            <h2>Hasil Kuisioner Visi Misi</h2>
+            <p>Berikut adalah hasil kuisioner visi dan misi yang telah diisi oleh mahasiswa.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pernah Membaca</th>
+                        <th>Sumber Informasi</th>
+                        <th>Pernah Mendapat Sosialisasi</th>
+                        <th>Tingkat Pemahaman</th>
+                        <th>Aspek Terakomodasi</th>
+                        <th>Cerminan Visi Misi</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($visi_misi as $j => $v){ ?>
+                    <tr>
+                        <td><?= $j + 1; ?></td>
+                        <td><?= $v['sudah_baca_visi_misi']; ?></td>
+                        <td><?= $v['sumber_info_visi_misi']; ?></td>
+                        <td><?= $v['sosialisasi_visi_misi']; ?></td>
+                        <td><?= $v['pemahaman_visi_misi']; ?></td>
+                        <td><?= $v['akomodasi_kegiatan_akademik']; ?></td>
+                        <td><?= $v['tercermin_visi_misi']; ?></td>
+                        <td><a href="<?= base_url('admin/deleteVisiMisi/'.$v['id']) ?>">Delete</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>

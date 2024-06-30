@@ -17,7 +17,9 @@ $routes->get('/kuisioner_layanan_kemahasiswaan', 'KuisionerLayananKemahasiswaan:
 $routes->get('/kuisioner_visi_misi', 'KuisionerVisiMisi::index');
 $routes->get('/kuisioner_selesai', 'KuisionerSelesai::index');
 $routes->get('/admin', 'Admin::index');
-$routes->get('/admin/delete/(:num)', 'Admin::delete/$1');
+$routes->get('/admin/deleteBiodata/(:num)', 'Admin::deleteBiodata/$1');
+$routes->get('/admin/deleteVisiMisi/(:num)', 'Admin::deleteVisiMisi/$1');
+$routes->get('/admin/deleteLayananAkademik/(:num)', 'Admin::deleteLayananAkademik/$1');
 $routes->add('kuisioner_biodata', 'KuisionerBiodata::create');
 $routes->add('kuisioner_visi_misi', 'KuisionerVisiMisi::create');
 $routes->get('Kuisioner', 'KuisionerController::index');
