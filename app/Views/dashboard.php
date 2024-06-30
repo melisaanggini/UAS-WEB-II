@@ -195,7 +195,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card">
-                    <img class="card-img-top" src="https://i.pinimg.com/564x/dd/3d/1b/dd3d1bc9a0e5f0156f5f7b710a1d7813.jpg" alt="Permintaan Data MK/PKL/TA">
+                    <img class="card-img-top" src="https://i.pinimg.com/564x/17/4f/5d/174f5dce9a192f703b5a4d8c4d7d4547.jpg" alt="Permintaan Data MK/PKL/TA">
                     <div class="card-body">
                         <h5 class="card-title">Permintaan Data MK/PKL/TA</h5>
                         <p class="card-text">Ajukan Permintaan Data dengan Mudah.</p>
