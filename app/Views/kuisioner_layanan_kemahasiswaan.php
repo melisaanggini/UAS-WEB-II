@@ -264,7 +264,7 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisioner_selesai.php">
+            <form method="post">
                 <div class="quiz-section">
                     <div class="quiz-group">
                         <label>Bagaimana tingkat kepuasan anda terhadap layanan di bidang penalaran, minat, bakat?</label>

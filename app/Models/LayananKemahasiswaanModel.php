@@ -9,6 +9,6 @@ class LayananKemahasiswaanModel extends Model
     protected $table = 'layanan_kemahasiswaan';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'kepuasan_penalaran', 'kepuasan_karir', 'kepuasan_bimbingan'
+        'layanan_penalaran', 'layanan_karir', 'layanan_bimbingan'
     ];
 }

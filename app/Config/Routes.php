@@ -24,6 +24,8 @@ $routes->add('kuisioner_biodata', 'KuisionerBiodata::create');
 $routes->add('kuisioner_visi_misi', 'KuisionerVisiMisi::create');
 $routes->get('Kuisioner', 'KuisionerController::index');
 $routes->get('biodata/(:segment)/delete', 'Admin::delete/$1');
+$routes->add('kuisioner_layanan_akademik', 'KuisionerLayananAkademik::create');
+$routes->add('kuisioner_layanan_kemahasiswaan', 'KuisionerLayananKemahasiswaan::create');
 
 
 

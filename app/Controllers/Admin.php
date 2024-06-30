@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\BiodataModel;
 use App\Models\VisiMisiModel;
-
+use App\Models\LayananAkademikModel;
 class Admin extends BaseController
 {
     public function index(): string

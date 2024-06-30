@@ -264,7 +264,7 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisioner_layanan_kemahasiswaan.php">
+            <form method="post">
                 <div class="quiz-section">
                     <label class="quiz-label"><h3>Keandalan (Reliability)</h3>Aspek Keandalan (reliability) bertujuan untuk mengukur sejauh mana layanan akademik yang
                         diberikan oleh Fakultas Teknik dapat diandalkan dan konsisten.
