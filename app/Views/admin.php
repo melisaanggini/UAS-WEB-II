@@ -169,29 +169,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($data as $u){ ?>
+                <?php foreach($data as $i => $u){ ?>
                     <tr>
-
-                        <td><?php echo $i++;?></td>
-
-                        <td><?php echo $u['namaLengkap']; ?></td>
-
-                        <td><?php echo $u['NIM']; ?></td>
-
-                        <td><?php echo $u['programStudi']; ?></td>
-
-                        <td><?php echo $u['noHandphone']; ?></td>
-
-                        <td><?php echo $u['semester']; ?></td>
-
-                        <td><?php echo $u['tahunAkademik']; ?></td>
-
-                        <td><?php echo $u['domisili']; ?></td>
-
-                        <td><a href="<?= base_url('biodata/'.$u['id'].'/delete') ?>">Delete</a></td>
-
+                        <td><?= $i + 1; ?></td>
+                        <td><?= $u['namaLengkap']; ?></td>
+                        <td><?= $u['NIM']; ?></td>
+                        <td><?= $u['programStudi']; ?></td>
+                        <td><?= $u['semester']; ?></td>
+                        <td><?= $u['noHandphone']; ?></td>
+                        <td><?= $u['tahunAkademik']; ?></td>
+                        <td><?= $u['domisili']; ?></td>
+                        <td><a href="<?= base_url('admin/delete/'.$u['id']) ?>">Delete</a></td>
                     </tr>
-                    <?php } ?>
+                <?php } ?>
                 </tbody>
             </table>
         </div>

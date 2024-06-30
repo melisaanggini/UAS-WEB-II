@@ -522,7 +522,7 @@
                 </div>
                 <div class="form-actions">
                     <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
-                    <a href="/kuisioner_layanan_kemahasiswaan">Lanjut</a>
+                    <button type="submit">Lanjut</button>
                 </div>
             </form>
         </div>

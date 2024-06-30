@@ -236,11 +236,11 @@
                     <p>Selesai</p>
                 </div>
             </div>
-            <form action="kuisioner_layanan_akademik.php">
+            <form method='post'>
                 <div class="form-group">
                     <label>Apakah Anda sudah pernah membaca "Visi, Misi, Tujuan dan Strategi" Fakultas Teknik ULM?</label>
-                    <input type="radio" name="visi_misi" value="Ya" required> Ya
-                    <input type="radio" name="visi_misi" value="Tidak" required> Tidak
+                    <input type="radio" name="sudah_baca_visi_misi" value="Ya" required> Ya
+                    <input type="radio" name="sudah_baca_visi_misi" value="Tidak" required> Tidak
                 </div>
                 <div class="form-group">
                     <label>Jika Ya, darimana anda mengetahui visi dan misi Fakultas? Boleh dipilih lebih dari satu</label>
@@ -281,7 +281,7 @@
                 </div>
                 <div class="form-actions">
                 <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
-                    <a href="/kuisioner_layanan_akademik">Lanjut</a>
+                    <button type="submit">Lanjut</button>
                 </div>
             </form>
         </div>

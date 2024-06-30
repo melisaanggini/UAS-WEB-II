@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\BiodataModel;
 
 class Admin extends BaseController
@@ -13,10 +14,10 @@ class Admin extends BaseController
         return view('admin', compact('data'));
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $biodata = new BiodataModel();
         $biodata->delete($id);
-        echo view('/dashboard');
+        return redirect()->to('/dashboard');
     }
-
 }

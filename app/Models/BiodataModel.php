@@ -13,8 +13,10 @@ class BiodataModel extends Model
         'namaLengkap', 'NIM', 'programStudi', 'semester', 'noHandphone', 'tahunAkademik', 'domisili'
     ];
 
-    function ambil_data(){
-
+    public function ambil_data()
+    {
         return $this->findAll();
     }
 }
+
+

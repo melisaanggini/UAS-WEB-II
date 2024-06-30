@@ -296,7 +296,7 @@
                 </div>
                 <div class="form-actions">
                     <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
-                    <a href="/kuisioner_selesai">Kirim</a>
+                    <button type="submit">Kirim</button>
                 </div>
             </form>
         </div>
