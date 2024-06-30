@@ -244,11 +244,11 @@
                 </div>
                 <div class="form-group">
                     <label>Jika Ya, darimana anda mengetahui visi dan misi Fakultas? Boleh dipilih lebih dari satu</label>
-                    <input type="checkbox" name="sumber_visi_misi" value="Website / Media Sosial"> Website / Media Sosial
-                    <input type="checkbox" name="sumber_visi_misi" value="Brosur"> Brosur
-                    <input type="checkbox" name="sumber_visi_misi" value="Pidato / Sosialisasi Pimpinan"> Pidato / Sosialisasi Pimpinan
-                    <input type="checkbox" name="sumber_visi_misi" value="Banner / Pamflet"> Banner / Pamflet
-                    <input type="checkbox" name="sumber_visi_misi" value="Paparan Informasi"> Paparan Informasi
+                    <input type="checkbox" name="sumber_info_visi_misi" value="Website / Media Sosial"> Website / Media Sosial
+                    <input type="checkbox" name="sumber_info_visi_misi" value="Brosur"> Brosur
+                    <input type="checkbox" name="sumber_info_visi_misi" value="Pidato / Sosialisasi Pimpinan"> Pidato / Sosialisasi Pimpinan
+                    <input type="checkbox" name="sumber_info_visi_misi" value="Banner / Pamflet"> Banner / Pamflet
+                    <input type="checkbox" name="sumber_info_visi_misi" value="Paparan Informasi"> Paparan Informasi
                 </div>
                 <div class="form-group">
                     <label>Apakah anda sudah pernah mendapatkan sosialisasi/penjelasan tentang "Visi, Misi, Tujuan dan Strategi" Fakultas Teknik ULM?</label>
@@ -266,18 +266,18 @@
                 </div>
                 <div class="form-group">
                     <label>Menurut Anda apakah semua aspek kegiatan akademik sudah terakomodasi dalam visi dan misi Fakultas Teknik ULM?</label>
-                    <input type="radio" name="akomodasi_visi_misi" value="Sudah" required> Sudah
-                    <input type="radio" name="akomodasi_visi_misi" value="Sebagian"> Sebagian
-                    <input type="radio" name="akomodasi_visi_misi" value="Hanya Sedikit"> Hanya Sedikit
-                    <input type="radio" name="akomodasi_visi_misi" value="Tidak Ada"> Tidak Ada
+                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Sudah" required> Sudah
+                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Sebagian"> Sebagian
+                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Hanya Sedikit"> Hanya Sedikit
+                    <input type="radio" name="akomodasi_kegiatan_akademik" value="Tidak Ada"> Tidak Ada
                 </div>
                 <div class="form-group">
                     <label>Berdasarkan pertanyaan diatas, sudah tercermin dalam segi apakah visi dan misi Fakultas Teknik ULM? Boleh memilih jawaban lebih dari satu</label>
-                    <input type="checkbox" name="cerminan_visi_misi" value="Kurikulum & Kompetensi Lulusan"> Kurikulum & Kompetensi Lulusan
-                    <input type="checkbox" name="cerminan_visi_misi" value="Proses Pembelajaran"> Proses Pembelajaran
-                    <input type="checkbox" name="cerminan_visi_misi" value="Penelitian / Pengabdian"> Penelitian / Pengabdian
-                    <input type="checkbox" name="cerminan_visi_misi" value="Kompetensi dosen/ karyawan"> Kompetensi dosen/ karyawan
-                    <input type="checkbox" name="cerminan_visi_misi" value="Tidak Ada"> Tidak Ada
+                    <input type="checkbox" name="tercermin_visi_misi" value="Kurikulum & Kompetensi Lulusan"> Kurikulum & Kompetensi Lulusan
+                    <input type="checkbox" name="tercermin_visi_misi" value="Proses Pembelajaran"> Proses Pembelajaran
+                    <input type="checkbox" name="tercermin_visi_misi" value="Penelitian / Pengabdian"> Penelitian / Pengabdian
+                    <input type="checkbox" name="tercermin_visi_misi" value="Kompetensi dosen/ karyawan"> Kompetensi dosen/ karyawan
+                    <input type="checkbox" name="tercermin_visi_misi" value="Tidak Ada"> Tidak Ada
                 </div>
                 <div class="form-actions">
                 <button type="button" class="secondary" onclick="window.history.back()">Sebelumnya</button>
